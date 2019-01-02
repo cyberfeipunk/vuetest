@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="app">
+      {{ name }}
+    </div>
+
+    <div id="app1">
+      <h1>{{ title }}</h1>
+      <ol>
+        <li v-for="t in todos">
+          <dl>
+            <dt>{{ t.name }}</dt>
+            <dd>{{t.description}}</dd>
+          </dl>
+        </li>
+      </ol>
+      <button v-on:click="f1">Click</button>
+    </div>
+
+    <div id="app2">
+      <h1>app2</h1>
+      <h1>{{title}}</h1>
+      <ol>
+        <todo-item v-for="t in todos" v-bind:todo="t" v-bind:key="item.id"></todo-item>
+      </ol>
+      <div v-if="div1">
+          div1显示
+      </div>
+      #######
+
+##########
+
+      <button v-on:click="f1">Click</button>
+    </div>
+
+    <div id="app3">
+      <cb></cb>
+    </div>
+
+<script src="/dist/test.js"></script>
+  </body>
+</html>
