@@ -5,7 +5,9 @@ module.exports = {
   //entry: './src/main.js',
   entry:{
     'build':'./src/main.js',
-    'test':'./src/test.js'
+    'test':'./src/test.js',
+    'routeprops':"./src/routeprops.js",
+    'scrollbehavior':"./src/scrollbehavior.js"
   },
   output: {
     path: path.resolve(__dirname, './dist'),
