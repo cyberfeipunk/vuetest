@@ -39,3 +39,38 @@ var app3 = new Vue({
     todos:data1
   }
 });
+
+var sourceOfTruth ={source1:5};
+var app4 = new Vue({
+  el:'#app4',
+  data:sourceOfTruth
+});
+
+var app5 = new Vue({
+  el:'#app5',
+  data:sourceOfTruth
+});
+
+sourceOfTruth.source1 = 7;
+
+app5.source1 = 8;
+
+const NotFound = {template:'<p>page not found</p>'};
+const Home = {template:'<p>Home Page</p>'};
+const About = {template:'<p>About Page</p>'};
+const Test = {template:'<p>Test Page<slot></slot></p>'};
+const Test1 = {"div":{}};
+
+const routes = {"/":Home,"/about":About,"/test.html":Test};
+var app6 = new Vue({
+  el:"#app6",
+  data:{
+    currentRoute:window.location.pathname
+  },
+  computed:{
+    ViewComponent(){
+      return routes[this.currentRoute] || NotFound;
+    }
+  },
+  render: function(h) { return h(this.ViewComponent,'aaaaaaaa')}
+});
