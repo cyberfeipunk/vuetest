@@ -13,6 +13,8 @@ var data1 = [
   {name:'t2',description:"todos of 2"},
 ];
 
+
+
 var app1 = new Vue({
   el:"#app1",
   data:{
@@ -73,4 +75,10 @@ var app6 = new Vue({
     }
   },
   render: function(h) { return h(this.ViewComponent,'aaaaaaaa')}
+});
+
+import hvue from "./components/hvue";
+var app7 = new Vue({
+  el:"#app7",
+  components:{'hvue':hvue}
 });

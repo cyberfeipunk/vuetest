@@ -6,6 +6,7 @@ module.exports = {
   entry:{
     'build':'./src/main.js',
     'test':'./src/test.js',
+    'eltest':'./src/eltest/eltest.js',
     'routeprops':"./src/routeprops.js",
     'scrollbehavior':"./src/scrollbehavior.js"
   },
@@ -73,6 +74,10 @@ module.exports = {
         options: {
           name: '[name].[ext]?[hash]'
         }
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        loader: 'file-loader'
       }
     ]
   },
